@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 18pt;
+    background-color: #F9AF4E;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+}
+.itemTemplateWrapper {
+    border: 1px solid gray;
+    padding: 5pt;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 400px;
+    display: block;
+    float: left;
+    background-color: aqua;
+}
+#mainHead {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 2%;
+    text-align: center;
+    min-height: 10%;
+    min-width: 100%;
+    background-color: #FAB760;
+    -webkit-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+
+}
+#handleContainerWrapper {
+}
+.wrapperinBox {
+    float: left;
+    text-align: center;
+    width: 33.3%;
+    font-size: 1.5em;
+}
+#mainFooter {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 200px;
+    background: #FAB760;
+    margin-top: 20px;
+}
+input[type="text"] {
+    text-align: center;
+    display: block;
+    margin: 0;
+    width: 60%;
+    font-family: sans-serif;
+    font-size: 18px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+}
+input[type="text"]:focus {
+    outline: none;
+}
+.style-4 input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s;
+}
+.style-4 input[type="text"]:focus,
+.style-4 input[type="text"].focus {
+    border-bottom: solid 2px #969696;
+}
+.readonly{
+
+}

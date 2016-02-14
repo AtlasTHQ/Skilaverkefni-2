@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vefapp</title>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+    <div id="mainHead">
+        <h2>Currency Converter</h2>
+    </div>
+    <div id="mainCenter">
+
+    </div>
+    <div id="handleContainerWrapper">
+        <div class="wrapperinBox">
+            <div id="upperContainer">
+                <select>
+                    {{#each results}}
+                    <option value="{{shortName}}">({{shortName}}) {{longName}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div id="middleContainer">
+                <div>to</div>
+            </div>
+            <div id="lowerContainer">
+                <div>ISK</div>
+            </div>
+        </div>
+        <div class="wrapperinBox">=</div>
+        <div class="wrapperinBox">
+            <div>
+                <section>
+                    Value:
+                    <ul class="input-list style-4 clearfix readonly">
+                        <input type="text" placeholder="Choose currency">
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <!--div id="currencyInfo">
+            Information about {{longName}}:
+            {{#each results}}
+                Key: {{@key}} Value = {{this}}
+            {{/each}}
+        </div-->
+
+    </div>
+    <!--div id="mainFooter">
+        Footer text
+    </div-->
+</div>
+</body>
+</html>
