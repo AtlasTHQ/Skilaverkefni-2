@@ -6,11 +6,14 @@
     <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
     <script src="js/js.js"></script>
     <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="c3/c3.js"></script>
+    <link rel="stylesheet" href="c3/c3.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div id="container">
-    <div id="mainHead">
+    <div class="mainHead">
         <h2>Currency Converter</h2>
     </div>
     <div id="mainCenter">
@@ -20,6 +23,7 @@
         <div class="wrapperinBox">
             <div id="upperContainer">
                 <select>
+                    <option disabled selected> ---- select an option ---- </option>
                     {{#each results}}
                     <option value="{{shortName}}">({{shortName}}) {{longName}}</option>
                     {{/each}}
@@ -32,7 +36,7 @@
                 <div>ISK</div>
             </div>
         </div>
-        <div class="wrapperinBox">=</div>
+        <div class="wrapperinBox middle">=</div>
         <div class="wrapperinBox">
             <div>
                 <section>
@@ -43,6 +47,22 @@
                 </section>
             </div>
         </div>
+        <div class="infoBlock">
+            <button>Open/Close</button>
+            <div id="infoBlockText">
+                <p>I am an information block. Click to open, click to close.</p>
+                <ul>
+                    <p>Asking value: {{askValue}}</p>
+                    <p>Bidding value: {{bidValue}}</p>
+                    <p>Currency name: {{longName}}</p>
+                    <p>Currency short: {{shortName}}</p>
+                    <p>Current value: {{value}}</p>
+                </ul>
+            </div>
+        </div>
+        <div class="white infoBlock">
+            <div id="chart"></div>
+        </div>
         <!--div id="currencyInfo">
             Information about {{longName}}:
             {{#each results}}
@@ -51,9 +71,9 @@
         </div-->
 
     </div>
-    <!--div id="mainFooter">
+    <div class="mainHead footer">
         Footer text
-    </div-->
+    </div>
 </div>
 </body>
 </html>
